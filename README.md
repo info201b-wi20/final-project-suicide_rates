@@ -2,11 +2,11 @@
 Use this `REAMDE.md` file to describe your final project (as detailed on Canvas).
 
 Why are we interested in Suicide Rates?
-- To investigate possible correlations between a country’s socioeconomic status and its suicide rate. Awareness of mental health has been an emerging topic in developed countries but is not as emphasized in undeveloped countries.
+- To investigate possible correlations between a country’s socioeconomic status and its suicide rate. Awareness of mental health has been an emerging topic in developed countries but is not as emphasized in undeveloped countries. `FIX`
 
 Other projects related to this domain:
-- [Project 1](http://worldpopulationreview.com/countries/suicide-rate-by-country/)
-- [Project 2](https://public.tableau.com/profile/lulu.ilmaknun.qurotaini#!/vizhome/Suicide_15656012138740/Map)
+- [Suicide Rate By Country 2020](http://worldpopulationreview.com/countries/suicide-rate-by-country/)
+- [World Suicide Data Visualization with Tableau](https://public.tableau.com/profile/lulu.ilmaknun.qurotaini#!/vizhome/Suicide_15656012138740/Map)
 - [Suicide - Our World in Data](https://ourworldindata.org/suicide)
 
 Questions we hope to answer:
@@ -36,13 +36,11 @@ There are seven columns in the data, featuring the number of mental hospitals, m
 What questions (from above) can be answered using the data in this dataset?
 Is there a correlation between a country’s socioeconomic status and its suicide rate?
 
-- [3](https://data.oecd.org/healthstat/suicide-rates.htm)
->How was the data collected or generated?
-The data came from the Organization for Economic Cooperation and Development, which came from the World Health Organization’s Mortality Database. The indicator is presented as a total and per gender and is measured in terms of deaths per 100 000 inhabitants (total), per 100 000 men and per 100 000 women.
-How many observations (rows) are in your data?
-5785 rows (each row showcases a country’s suicide rate within a certain year (per 100,000 people)
+- [OECD Data - Suicide Rates](https://data.oecd.org/healthstat/suicide-rates.htm)
+>- The data came from the Organization for Economic Cooperation and Development, which came from the World Health Organization’s Mortality Database. The indicator is presented as a total and per gender and is measured in terms of deaths per 100 000 inhabitants (total), per 100 000 men and per 100 000 women.
+- There are 5785 observations/rows (each row showcases a country’s suicide rate within a certain year (per 100,000 people)
 How many features (columns) are in the data?
-8 columns
+There are 8 features/columns (`list it out`)
 What questions (from above) can be answered using the data in this dataset?
 How has the suicide rate of a country changed over time?
 How do different countries’ suicides rates change over time? Are they similar or drastically different, and if different, why so?
