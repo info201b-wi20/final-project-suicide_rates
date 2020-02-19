@@ -43,5 +43,5 @@
 - [OECD Data - Suicide Rates](https://data.oecd.org/healthstat/suicide-rates.htm)
 >- This data originated from the Organization for Economic Cooperation and Development, which came from the World Health Organization’s Mortality Database. The indicator is presented as a total and per gender and is measured in terms of deaths per 100 000 inhabitants (total), per 100 000 men and per 100 000 women.
 >- There are 5785 observations/rows (each row showcases a country’s suicide rate within a certain year (per 100,000 people)
->-There are 8 features/columns in this data
+>- There are 8 features/columns in this data
 >- _How do different countries’ suicide rates change over time? Are they similar or drastically different, and if different, why so?_
