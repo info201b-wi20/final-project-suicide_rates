@@ -18,7 +18,7 @@ Questions we hope to answer:
 
 ## Finding Data
 - [Suicide Rates Overview 1985 to 2016](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016)
-: - This data is collected by Kaggle’s user [Rusty] from United Nations Development Program, World Bank, [Szamil], and World Health Organization. It is about the Suicide Rates Overview from 1985 to 2016.
+>- This data is collected by Kaggle’s user [Rusty] from United Nations Development Program, World Bank, [Szamil], and World Health Organization. It is about the Suicide Rates Overview from 1985 to 2016.
 >- There are 27,821 observations (rows) are in this data.
 >- There are 12 features (columns) in this data.
 >- What questions (from above) can be answered using the data in this dataset?
