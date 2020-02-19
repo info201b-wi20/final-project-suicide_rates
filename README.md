@@ -1,7 +1,6 @@
 # Final Project
-Use this `REAMDE.md` file to describe your final project (as detailed on Canvas).
 
-Why are we interested in Suicide Rates?
+**Suicide Rates**
 - Our project will be investigating suicide rates globally in comparison to mental health facilities offered, and the socioeconomic status of each country. Suicide has become more widely talked about in social media in recent years, however it seems the awareness of mental health has been an emerging topic in developed countries but is not as emphasized in undeveloped countries. Suicide has resulted in the loss of many amazing people. As such, we want to investigate possible correlations between these different indicators, hopefully determining a reason or a trend for higher suicide rates in particular countries over others.
 
 ---
@@ -20,31 +19,29 @@ Why are we interested in Suicide Rates?
 - Is there a correlation between a country’s socioeconomic status and its suicide rate?
 >- Using data from ..., we can directly compare a country's socioeconomic status with it's suicide rate.
 - Are there more mental health facilities for countries with higher suicide rates? Or is the number affected by socioeconomic status?
->- n
+>- 
 - How does age and gender relate to the number of suicide rates? IS there a higher rate for a particular demographic?
->- m
+>- 
 `Describes how the question can be answered using data (e.g., a specific comparison within or analysis of the data that answers the question) (1 point)`
+>- How do different countries’ suicide rates change over time? Are they similar or drastically different, and if different, why so?
 
 ## Finding Data
 - [Suicide Rates Overview 1985 to 2016](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016)
 >- This data is collected by Kaggle’s user [Rusty] from United Nations Development Program, World Bank, [Szamil], and World Health Organization. It provides a Suicide Rates Overview from 1985 to 2016.
 >- There are 27,821 observations (rows) are in this data.
 >- There are 12 features (columns) in this data.
->- What questions (from above) can be answered using the data in this dataset?
 >- _Is there a correlation between a country’s socioeconomic status and its suicide rate?_
->- Age and gender?_
+>- _How does age and gender relate to the number of suicide rates? IS there a higher rate for a particular demographic?_
 
 - [Mental health service availability](http://apps.who.int/gho/data/node.main.MHFAC?lang=en)
 >- The World Health Organization collected the data. It demonstrates the number of mental health facilities per 100000 population in observed countries from 2015 to 2017.
 >- There are 164 rows in total, consisting of 164 countries under observation
 >- There are seven columns in the data, featuring the number of mental hospitals, mental health units in general hospitals, mental health outpatient facilities, mental health day treatment facilities and community residential facilities per 1000000 population in the observed country.
-> What questions (from above) can be answered using the data in this dataset?
 >- _Is there a correlation between a country’s socioeconomic status and its suicide rate?_
+>- _Are there more mental health facilities for countries with higher suicide rates? Or is the number affected by socioeconomic status?_
 
 - [OECD Data - Suicide Rates](https://data.oecd.org/healthstat/suicide-rates.htm)
 >- This data originated from the Organization for Economic Cooperation and Development, which came from the World Health Organization’s Mortality Database. The indicator is presented as a total and per gender and is measured in terms of deaths per 100 000 inhabitants (total), per 100 000 men and per 100 000 women.
 >- There are 5785 observations/rows (each row showcases a country’s suicide rate within a certain year (per 100,000 people)
->-There are 8 features/columns in this data (`list it out`)
-> What questions (from above) can be answered using the data in this dataset?
->- _How has the suicide rate of a country changed over time?
->- How do different countries’ suicides rates change over time? Are they similar or drastically different, and if different, why so?_
+>-There are 8 features/columns in this data
+>- _How do different countries’ suicide rates change over time? Are they similar or drastically different, and if different, why so?_
