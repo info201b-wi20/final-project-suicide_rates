@@ -3,19 +3,19 @@ Use this `REAMDE.md` file to describe your final project (as detailed on Canvas)
 
 Why are we interested in Suicide Rates?
 - To investigate possible correlations between a country’s socioeconomic status and its suicide rate. Awareness of mental health has been an emerging topic in developed countries but is not as emphasized in undeveloped countries. `FIX`
-
+---
 Other projects related to this domain:
 - [Suicide Rate By Country 2020](http://worldpopulationreview.com/countries/suicide-rate-by-country/)
 - [World Suicide Data Visualization with Tableau](https://public.tableau.com/profile/lulu.ilmaknun.qurotaini#!/vizhome/Suicide_15656012138740/Map)
 - [Suicide - Our World in Data](https://ourworldindata.org/suicide)
 `Briefly describes the project in 1 - 2 sentences (1 points)`
-
+---
 Questions we hope to answer:
 - Is there a correlation between a country’s socioeconomic status and its suicide rate?
 - Common cause?
 - Age and gender?
 `Describes how the question can be answered using data (e.g., a specific comparison within or analysis of the data that answers the question) (1 point)`
-
+---
 ## Finding Data
 - [Suicide Rates Overview 1985 to 2016](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016)
 >- This data is collected by Kaggle’s user [Rusty] from United Nations Development Program, World Bank, [Szamil], and World Health Organization. It is about the Suicide Rates Overview from 1985 to 2016.
