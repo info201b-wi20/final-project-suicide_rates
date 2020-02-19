@@ -2,27 +2,36 @@
 Use this `REAMDE.md` file to describe your final project (as detailed on Canvas).
 
 Why are we interested in Suicide Rates?
-- To investigate possible correlations between a country’s socioeconomic status and its suicide rate. Awareness of mental health has been an emerging topic in developed countries but is not as emphasized in undeveloped countries. `FIX`
+- Our project will be investigating suicide rates globally in comparison to mental health facilities offered, and the socioeconomic status of each country. Suicide has become more widely talked about in social media in recent years, however it seems the awareness of mental health has been an emerging topic in developed countries but is not as emphasized in undeveloped countries. Suicide has resulted in the loss of many amazing people. As such, we want to investigate possible correlations between these different indicators, hopefully determining a reason or a trend for higher suicide rates in particular countries over others.
+
 ---
-Other projects related to this domain:
+
+**Other projects related to this domain:**
 - [Suicide Rate By Country 2020](http://worldpopulationreview.com/countries/suicide-rate-by-country/)
-- [World Suicide Data Visualization with Tableau](https://public.tableau.com/profile/lulu.ilmaknun.qurotaini#!/vizhome/Suicide_15656012138740/Map)
+>- This project investigates suicide rates in each country, providing one map visualization. It focuses on particular countries of note (South Korea, Japan, Switzerland and China) and provides a more detailed background on suicide (particular historical and demographic trends) as well as the political and legal issues pertaining to suicide in those countries.
+- [World Suicide Data Visualization with Tableau](https://medium.com/@lulu.ilmaknun.q/world-suicide-data-visualization-with-tableau-4464b68883f5)
+>- This project focuses on certain trends in suicide rates based on demographics, such as age, race, gender and generation. As it is mainly displaying the capabilities of Tableau, the analysis is mainly graph-based.
 - [Suicide - Our World in Data](https://ourworldindata.org/suicide)
-`Briefly describes the project in 1 - 2 sentences (1 points)`
+>- This project investigates changes in suicide rates throughout the years, the global and demographic distribution of those rates, the breakdown of methods used to commit suicide, and possible risk factors for suicide. Multiple charts are provided to clearly display the distribution in each section being investigated.
+
 ---
-Questions we hope to answer:
+
+**Questions we hope to answer:**
 - Is there a correlation between a country’s socioeconomic status and its suicide rate?
-- Common cause?
-- Age and gender?
+>- Using data from ..., we can directly compare a country's socioeconomic status with it's suicide rate.
+- Are there more mental health facilities for countries with higher suicide rates? Or is the number affected by socioeconomic status?
+>- n
+- How does age and gender relate to the number of suicide rates? IS there a higher rate for a particular demographic?
+>- m
 `Describes how the question can be answered using data (e.g., a specific comparison within or analysis of the data that answers the question) (1 point)`
----
+
 ## Finding Data
 - [Suicide Rates Overview 1985 to 2016](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016)
->- This data is collected by Kaggle’s user [Rusty] from United Nations Development Program, World Bank, [Szamil], and World Health Organization. It is about the Suicide Rates Overview from 1985 to 2016.
+>- This data is collected by Kaggle’s user [Rusty] from United Nations Development Program, World Bank, [Szamil], and World Health Organization. It provides a Suicide Rates Overview from 1985 to 2016.
 >- There are 27,821 observations (rows) are in this data.
 >- There are 12 features (columns) in this data.
 >- What questions (from above) can be answered using the data in this dataset?
->- _Is there a correlation between a country’s socioeconomic status and its suicide rate?
+>- _Is there a correlation between a country’s socioeconomic status and its suicide rate?_
 >- Age and gender?_
 
 - [Mental health service availability](http://apps.who.int/gho/data/node.main.MHFAC?lang=en)
