@@ -17,13 +17,13 @@
 
 **Questions we hope to answer:**
 - Is there a correlation between a country’s socioeconomic status and its suicide rate?
->- Using data from ..., we can directly compare a country's socioeconomic status with it's suicide rate.
-- Are there more mental health facilities for countries with higher suicide rates? Or is the number affected by socioeconomic status?
->- 
+>- Using data from "Suicide Rates Overview 1985 to 2016", we can directly graph each country's GDP per capita (an indicator for the standard of living) with it's suicide rate.
+- Are there more mental health facilities for countries with higher suicide rates? Or is the number more closely correlated with the countries' socioeconomic status?
+>- Using data from "Mental health service availability" and "Suicide Rates Overview 1985 to 2016", we will compare the many different mental health facilities and services available with the current suicide rate of each country and the "Suicide Rates Overview 1985 to 2016" GDP per capita.
 - How does age and gender relate to the number of suicide rates? IS there a higher rate for a particular demographic?
->- 
-`Describes how the question can be answered using data (e.g., a specific comparison within or analysis of the data that answers the question) (1 point)`
->- How do different countries’ suicide rates change over time? Are they similar or drastically different, and if different, why so?
+>- Using "Suicide Rates Overview 1985 to 2016" and "OECD Data - Suicide Rates", we will graph the data for each demographic and determine if particular age groups or gender has a particular bearing on the quantity of suicides.
+
+---
 
 ## Finding Data
 - [Suicide Rates Overview 1985 to 2016](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016)
@@ -38,10 +38,10 @@
 >- There are 164 rows in total, consisting of 164 countries under observation
 >- There are seven columns in the data, featuring the number of mental hospitals, mental health units in general hospitals, mental health outpatient facilities, mental health day treatment facilities and community residential facilities per 1000000 population in the observed country.
 >- _Is there a correlation between a country’s socioeconomic status and its suicide rate?_
->- _Are there more mental health facilities for countries with higher suicide rates? Or is the number affected by socioeconomic status?_
+>- _Are there more mental health facilities for countries with higher suicide rates? Or is the number more closely correlated with the countries' socioeconomic status?_
 
 - [OECD Data - Suicide Rates](https://data.oecd.org/healthstat/suicide-rates.htm)
 >- This data originated from the Organization for Economic Cooperation and Development, which came from the World Health Organization’s Mortality Database. The indicator is presented as a total and per gender and is measured in terms of deaths per 100 000 inhabitants (total), per 100 000 men and per 100 000 women.
 >- There are 5785 observations/rows (each row showcases a country’s suicide rate within a certain year (per 100,000 people)
 >- There are 8 features/columns in this data
->- _How do different countries’ suicide rates change over time? Are they similar or drastically different, and if different, why so?_
+>- _How does age and gender relate to the number of suicide rates? IS there a higher rate for a particular demographic?_
