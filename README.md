@@ -27,8 +27,8 @@
 
 ## Finding Data
 - [Suicide Rates Overview 1985 to 2016](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016)
->- This data is collected by Kaggle’s user [Rusty] from United Nations Development Program, World Bank, [Szamil], and World Health Organization. It provides a Suicide Rates Overview from 1985 to 2016.
->- There are 27,821 observations (rows) are in this data.
+>- This data is collected by Kaggle’s user [Rusty] from United Nations Development Program, World Bank, [Szamil], and World Health Organization. It provides a Suicide Rate Overview from 1985 to 2016 consisting of multiple indicators including the GDP of each country.
+>- There are 27,821 observations (rows) in this data.
 >- There are 12 features (columns) in this data.
 >- _Is there a correlation between a country’s socioeconomic status and its suicide rate?_
 >- _How does age and gender relate to the number of suicide rates? IS there a higher rate for a particular demographic?_
@@ -41,7 +41,7 @@
 >- _Are there more mental health facilities for countries with higher suicide rates? Or is the number more closely correlated with the countries' socioeconomic status?_
 
 - [OECD Data - Suicide Rates](https://data.oecd.org/healthstat/suicide-rates.htm)
->- This data originated from the Organization for Economic Cooperation and Development, which came from the World Health Organization’s Mortality Database. The indicator is presented as a total and per gender and is measured in terms of deaths per 100 000 inhabitants (total), per 100 000 men and per 100 000 women.
->- There are 5785 observations/rows (each row showcases a country’s suicide rate within a certain year (per 100,000 people)
+>- This data originated from the Organization for Economic Cooperation and Development, which came from the World Health Organization’s Mortality Database. The indicator is presented as a total, per gender, and is measured in terms of deaths per 100 000 inhabitants (total), per 100 000 men and per 100 000 women.
+>- There are 5785 observations/rows (each row showcases a country’s suicide rate within a certain year - per 100,000 people)
 >- There are 8 features/columns in this data
 >- _How does age and gender relate to the number of suicide rates? IS there a higher rate for a particular demographic?_
