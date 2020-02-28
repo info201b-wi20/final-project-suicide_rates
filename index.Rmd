@@ -1,0 +1,60 @@
+---
+title: "Suicide Rates"
+author: "Michelle Wong, Ploypilin Pruekcharoen, Yudong Li, Adam Ahmed"
+date: "2/28/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+---
+
+For this assignment, your team will create a report about one (or more) of the datasets you have selected for your final project. The report will introduce your domain and data to an unfamiliar user, and allow you to set the foundations for your final project. The report must include:
+
+    An introduction of the problem domain and dataset (feel free to borrow language you used in your brainstorm assignment)
+    A paragraph of summary information, citing at least 5 values calculated from the data
+    A table of  aggregated data (e.g., that has been "grouped" by one of your features)
+    Three charts that display information from the data (what you visualize is up to you). 
+index.Rmd File
+
+In the Markdown document you create, you should leverage the functions written in the other files to create your report:
+
+    Write an introductory paragraph explaining the domain/data set (feel free to borrow from the brainstorm part of the assignment)
+    Write a summary paragraph that includes information calculated by your summary information function
+    Render your table and describe pertinent observations found in it
+    Describe the purpose of each chart (e.g., "this chart was intended to show the relationship between..."), render each chart, and describe pertinent observations found in each chart
+
+Each function must return a different type of visualization (e.g., you can only create one Scatter Plot).  Again, in your report you must describe why you included the chart (e.g., what it attempts to seeks to express), and what information it reveals. For each chart, we expect the following:
+
+    Proper labels/titles/legends
+    Intentional chart type and encoding selection based on the question of interest and data type
+
+# Suicide Rates
+
+## Introduction
+Our project will be investigating suicide rates globally in comparison to the mental health facilities offered in each country, and the GDP per Capita of each country. Suicide has become more widely talked about in social media in recent years, however it seems that the awareness of mental health has been an emerging topic in developed countries but is not as emphasized in undeveloped countries. Suicide has resulted in the loss of many amazing people. As such, we want to investigate possible correlations between these different indicators, hopefully determining a reason or a trend for higher suicide rates in particular countries over others.
+
+We will be using data from [Suicide Rates Overview 1985 to 2016](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016) and [Mental health service availability](http://apps.who.int/gho/data/node.main.MHFAC?lang=en) to create data visualizations that may aid us in finding these trends. 
