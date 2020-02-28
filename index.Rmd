@@ -58,3 +58,25 @@ Each function must return a different type of visualization (e.g., you can only 
 Our project will be investigating suicide rates globally in comparison to the mental health facilities offered in each country, and the GDP per Capita of each country. Suicide has become more widely talked about in social media in recent years, however it seems that the awareness of mental health has been an emerging topic in developed countries but is not as emphasized in undeveloped countries. Suicide has resulted in the loss of many amazing people. As such, we want to investigate possible correlations between these different indicators, hopefully determining a reason or a trend for higher suicide rates in particular countries over others.
 
 We will be using data from [Suicide Rates Overview 1985 to 2016](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016) and [Mental health service availability](http://apps.who.int/gho/data/node.main.MHFAC?lang=en) to create data visualizations that may aid us in finding these trends. 
+
+- [Suicide Rates Overview 1985 to 2016](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016)
+> Summary info here
+- [Mental health service availability](http://apps.who.int/gho/data/node.main.MHFAC?lang=en)
+> Summary info here
+
+## Summary Table
+``` {r, echo=FALSE}
+summary_table
+```
+This table is sorted by... and contains...
+
+## Chart 1
+
+
+## Chart 2
+
+
+## Chart 3
+
+## Conclusion
+
