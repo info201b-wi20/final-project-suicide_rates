@@ -65,6 +65,7 @@ We will be using data from [Suicide Rates Overview 1985 to 2016](https://www.kag
 > Summary info here
 
 ## Summary Table
+
 ``` {r, echo=FALSE}
 summary_table
 ```
@@ -72,11 +73,21 @@ This table is sorted by... and contains...
 
 ## Chart 1
 
+``` {r, echo=FALSE}
+chart_one
+```
 
 ## Chart 2
 
+``` {r, echo=FALSE}
+chart_two
+```
 
 ## Chart 3
+
+``` {r, echo=FALSE}
+chart_three
+```
 
 ## Conclusion
 
