@@ -26,7 +26,9 @@ get_summary_info <- function(data_set) {
 
     average_mental_hospitals <- combined_table %>%
       summarize(mean_hospitals = mean(total_avalibility)) %>%
-      pull(mean_hospitals)
+      pull(mean_hospitals),
+    
+    col_names <- dput(names(combined_table))
   ))
 }
 
