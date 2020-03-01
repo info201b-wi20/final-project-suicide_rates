@@ -9,12 +9,11 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 source("summary_table.R")
 source("facility_chart.R")
-
+source("summary.R")
 
 ```
 
 [//]: # (source("analysis.R")
-source("analysis.R")
 source("analysis.R"))
 
 ## R Markdown
@@ -80,7 +79,7 @@ summary_table
 This table is sorted by... and contains...
 
 ## Chart 1
-
+This table displays any trends between 
 ``` {r, echo=FALSE}
 facility_chart
 ```
