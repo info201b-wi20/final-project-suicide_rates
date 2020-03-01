@@ -7,7 +7,15 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+source("summary_table.R")
+source("facility_chart.R")
+
+
 ```
+
+[//]: # (source("analysis.R")
+source("analysis.R")
+source("analysis.R"))
 
 ## R Markdown
 
@@ -74,20 +82,23 @@ This table is sorted by... and contains...
 ## Chart 1
 
 ``` {r, echo=FALSE}
-chart_one
+facility_chart
 ```
 
 ## Chart 2
 
-``` {r, echo=FALSE}
+
+[//]: # (``` {r, echo=FALSE}
 chart_two
-```
+```)
 
 ## Chart 3
 
-``` {r, echo=FALSE}
+
+
+[//]: # (``` {r, echo=FALSE}
 chart_three
-```
+````)
 
 ## Conclusion
 
