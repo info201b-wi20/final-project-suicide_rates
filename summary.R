@@ -5,7 +5,7 @@
 
 library("dplyr")
 
-combined_table <- read.csv("combined_table.csv", stringsAsFactors = FALSE)
+combined_table <- read.csv("data/combined_table.csv", stringsAsFactors = FALSE)
 
 get_summary_info <- function(data_set) {
   return(list(
