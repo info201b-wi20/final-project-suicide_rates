@@ -10,11 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 source("summary_table.R")
 source("facility_chart.R")
 source("summary.R")
-
 ```
-
-[//]: # (source("analysis.R")
-source("analysis.R"))
 
 ## R Markdown
 
@@ -38,9 +34,6 @@ Note that the `echo = FALSE` parameter was added to the code chunk to prevent pr
 
 
 ---
-
-For this assignment, your team will create a report about one (or more) of the datasets you have selected for your final project. The report will introduce your domain and data to an unfamiliar user, and allow you to set the foundations for your final project. The report must include:
-
     An introduction of the problem domain and dataset (feel free to borrow language you used in your brainstorm assignment)
     A paragraph of summary information, citing at least 5 values calculated from the data
     A table of  aggregated data (e.g., that has been "grouped" by one of your features)
@@ -64,12 +57,9 @@ Each function must return a different type of visualization (e.g., you can only 
 ## Introduction
 Our project will be investigating suicide rates globally in comparison to the mental health facilities offered in each country, and the GDP per Capita of each country. Suicide has become more widely talked about in social media in recent years, however it seems that the awareness of mental health has been an emerging topic in developed countries but is not as emphasized in undeveloped countries. Suicide has resulted in the loss of many amazing people. As such, we want to investigate possible correlations between these different indicators, hopefully determining a reason or a trend for higher suicide rates in particular countries over others.
 
-We will be using data from [Suicide Rates Overview 1985 to 2016](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016) and [Mental health service availability](http://apps.who.int/gho/data/node.main.MHFAC?lang=en) to create data visualizations that may aid us in finding these trends. 
+We will be using combined data from both [Suicide Rates Overview 1985 to 2016](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016) and [Mental health service availability](http://apps.who.int/gho/data/node.main.MHFAC?lang=en) to create data visualizations that may aid us in finding these trends. 
 
-- [Suicide Rates Overview 1985 to 2016](https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016)
-> Summary info here
-- [Mental health service availability](http://apps.who.int/gho/data/node.main.MHFAC?lang=en)
-> Summary info here
+Our combined dataset has `r countries_no` countries and columns: `r col_names`. The average suicide rate (per ..) was `r average_suicide_rate` with the largest suicide rate of `r max_suicide_rate`. The average GDP per capita for this dataset is `r average_gdp` and the average number of mental health facilities offered (per ...) was `r average_mental_hospitals`.
 
 ## Summary Table
 
@@ -87,17 +77,11 @@ facility_chart
 ## Chart 2
 
 
-[//]: # (``` {r, echo=FALSE}
-chart_two
-```)
 
 ## Chart 3
 
 
 
-[//]: # (``` {r, echo=FALSE}
-chart_three
-````)
 
 ## Conclusion
 
