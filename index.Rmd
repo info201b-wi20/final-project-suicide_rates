@@ -63,16 +63,12 @@ Our combined dataset has `r countries_no` countries and columns: `r col_names`. 
 
 ## Summary Table
 
-``` {r, echo=FALSE}
-summary_table
-```
+
 This table is sorted by... and contains...
 
 ## Chart 1
 This table displays any trends between 
-``` {r, echo=FALSE}
-facility_chart
-```
+
 
 ## Chart 2
 
