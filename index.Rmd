@@ -48,7 +48,7 @@ Our combined dataset has `r countries_no` countries and columns: `r col_names`. 
 This table is sorted by... and contains all countries we are assessing as well as their corresponding average GDPs per capita, number of mental health facilities, and the total number of suicides across the years.
 
 ``` {r, echo=FALSE}
-get_summary_information
+get_summary_information()
 ```
 
 From this summary, we can observe that...
@@ -98,13 +98,13 @@ From this chart, we can observe a ...
 
 ## Suicide Rates, GDP
 
-We created a scatterplot to display the GDP per capita of each country against their respective suicide rates for the years 2014 to 2016. We were investigating potential connections between suicide rates and a country's socioeconimic status.
+We created a scatterplot to display the GDP per capita of each country against their respective suicide rates for the years 2014 to 2016. We were investigating potential connections between suicide rates and a country's socioeconomic status.
 
 ``` {r, echo=FALSE}
 chart2
 ```
 
-However, as we can observe from this scatterplot there does not appear to be a correlation between the GDP per capita of a country and the suicide rate of the country.
+However, as we can observe from this scatterplot, there does not appear to be a correlation between the GDP per capita of a country and the suicide rate of the country across all 3 years. The hi
 
 
 ## Conclusion
