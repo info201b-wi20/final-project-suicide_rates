@@ -17,6 +17,8 @@ get_summary_information = function() {
       "Number of suicides (per 100k population)" = sum(suicides.100k.pop)
     )
   
+  df_sex <- df_countries
+  
   df_facility_filtered <- df_facility %>%
     filter(Country %in% df_countries_filtered$country) %>%
     group_by(Country) %>%
@@ -36,4 +38,5 @@ get_summary_information = function() {
   
   return(df_summary)
 }
+
 

@@ -1,3 +1,4 @@
+library(dplyr)
 df_facility <- read.csv("data/Mental Health Facilities.csv")
 df_countries <- read.csv("data/suicide-rates-overview-1985-to-2016.csv")
 
@@ -11,8 +12,7 @@ df_countries_filtered <- df_countries %>%
   filter(year == max(year)) %>%
   summarise(
     "Gpd per capita" = mean(gdp_per_capita....),
-    "Number of suicides (per 100k population)" = sum(suicides.100k.pop)
-    
+    "Number of suicides (per 100k population)" = sum(suicides.100k.pop),
   )
 
 df_facility_filtered <- df_facility %>%
