@@ -51,61 +51,41 @@ This table is sorted by... and contains all countries we are assessing as well a
 get_summary_information()
 ```
 
-From this summary, we can observe that...
+This summary of our data is arranged in descending order of suicides. As such, we can observe that...
 
 ---
 
 ## Mental Health Facilities Available
 
-This map displays the mental health facilities available globally, showing the 
+This map displays the mental health facilities available globally, showing in color countries that are included in our data. 
 ```{r, echo=FALSE}
-source("facility_chart.r")
-world_shape <- create_map()
- blank_theme <- theme_bw() +
-   theme(
-     axis.line = element_blank(),        # remove axis lines
-     axis.text = element_blank(),        # remove axis labels
-     axis.ticks = element_blank(),       # remove axis ticks
-     axis.title = element_blank(),       # remove axis titles
-     plot.background = element_blank(),  # remove gray background
-     panel.grid.major = element_blank(), # remove major grid lines
-     panel.grid.minor = element_blank(), # remove minor grid lines
-     panel.border = element_blank()      # remove border around plot
-   )
- 
- ggplot(world_shape) + 
-   geom_polygon(
-     mapping = aes(x = long, y = lat, group = group, fill = total_avalibility),
-     color = "white", 
-     size = .1        
-   ) + 
-   coord_map(xlim=c(-180,180)) + 
-   scale_fill_continuous(low = "#cc3300", high = "#800000") + 
-   labs(fill = "total_avalibility") + 
-   blank_theme
-
-create_map
+create_map()
 ```
 
 ## Suicide Rates, Gender, and Age
 
-This bar chart displays the correlation between the different age groups of each gender (Male or Female) for each country, displaying the trend.
+This bar chart displays the correlation between the different age groups of each gender (Male or Female) and the corresponding number of suicides for individuals in each category.
 
 ``` {r, echo=FALSE}
-chart1
+chart1()
 ```
-From this chart, we can observe a ...
+
+From this chart, we can observe that suicide rates increase across both genders from individuals 5-14 years old, to individuals 35-54 years old. The number of suicides peak for individuals of both genders between 35-54 years old with 34532 suicides per 100k population for females and ... suicides per 100k population for males. The suicide rates for both genders decrease from individuals 55-74 years old to 75+ years old. The lowest number of suicides observed was for the age group 5-14 years old. As such, we observe a bell curve in the number of suicides across both genders, centering around individuals between 35-54 years old. There were lower suicide rates for females than for males across every age group.
 
 ## Suicide Rates, GDP
 
 We created a scatterplot to display the GDP per capita of each country against their respective suicide rates for the years 2014 to 2016. We were investigating potential connections between suicide rates and a country's socioeconomic status.
 
 ``` {r, echo=FALSE}
-chart2
+chart2()
 ```
 
-However, as we can observe from this scatterplot, there does not appear to be a correlation between the GDP per capita of a country and the suicide rate of the country across all 3 years. The hi
+However, as we can observe from this scatterplot, there does not appear to be a correlation between the GDP per capita of a country and the suicide rate of the country across all 3 years. However, there are groupings of data plots that display particular characteristics. The countries with the highest suicide rates(300-400 per 100k population) were within 0-0.5 million GDP per Capita while countries with GDP per capita between 1 million and 1.5 million had suicide rates under 200(per 100k population). 
 
 
 ## Conclusion
+
+The data visualization for suicide rates, age and gender displays a bell-shaped trend between the number of suicides and age across both males and females. The suicide rate is highest for both genders between 35-54 years old. 
+
+There does not seem to be a correlation between GDP per capita and suicide rates. However, the outlying data plots are grouped into particular categories. The countries with the highest suicide rates(300-400 per 100k population) were within 0-0.5 million GDP per Capita while countries with GDP per capita between 1 million and 1.5 million had suicide rates under 200(per 100k population). 
 
