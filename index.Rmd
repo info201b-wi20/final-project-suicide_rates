@@ -48,7 +48,7 @@ Our combined dataset has `r countries_no` countries and columns: `r col_names`. 
 This table is sorted by... and contains all countries we are assessing as well as their corresponding average GDPs per capita, number of mental health facilities, and the total number of suicides across the years.
 
 ``` {r, echo=FALSE}
-get_summary_information
+get_summary_information()
 ```
 
 From this summary, we can observe that...

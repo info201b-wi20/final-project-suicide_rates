@@ -1,4 +1,5 @@
 library(dplyr)
+library(knitr)
 
 get_summary_information = function() {
   df_facility <- read.csv("data/Mental Health Facilities.csv")
@@ -34,9 +35,10 @@ get_summary_information = function() {
   df_summary <- df_countries_filtered %>%
     mutate(
       "Mental Health Facility Avaliable(per 100k population)" = df_facility_filtered$"total avalibility per 100k population"
-    )
+    ) %>%
+    arrange(`Number of suicides (per 100k population)`)
   
-  return(df_summary)
+  result <- kable(df_summary)
+
+  return(result)
 }
-
-
