@@ -6,7 +6,6 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
 library(ggplot2)
 library(mapproj)
@@ -14,7 +13,7 @@ library(knitr)
 ```
 
 # Suicide Rates Globally
-```{r getInformation, echo=FALSE}
+```{r getInformation, include=FALSE}
 source("summary.R")
 info <- get_summary_info()
 countries_no <- info$countries_no
