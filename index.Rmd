@@ -14,27 +14,7 @@ source("suicide_age_chart.R")
 source("suicide_gdp_chart.R")
 ```
 
-# Suicide Rates in Countries
-
-    An introduction of the problem domain and dataset (feel free to borrow language you used in your brainstorm assignment)
-    A paragraph of summary information, citing at least 5 values calculated from the data
-    A table of  aggregated data (e.g., that has been "grouped" by one of your features)
-    Three charts that display information from the data (what you visualize is up to you). 
-index.Rmd File
-
-In the Markdown document you create, you should leverage the functions written in the other files to create your report:
-
-    Write an introductory paragraph explaining the domain/data set (feel free to borrow from the brainstorm part of the assignment)
-    Write a summary paragraph that includes information calculated by your summary information function
-    Render your table and describe pertinent observations found in it
-    Describe the purpose of each chart (e.g., "this chart was intended to show the relationship between..."), render each chart, and describe pertinent observations found in each chart
-
-Each function must return a different type of visualization (e.g., you can only create one Scatter Plot).  Again, in your report you must describe why you included the chart (e.g., what it attempts to seeks to express), and what information it reveals. For each chart, we expect the following:
-
-    Proper labels/titles/legends
-    Intentional chart type and encoding selection based on the question of interest and data type
-
-# Suicide Rates
+# Suicide Rates Globally
 
 ## Introduction
 Our project will be investigating suicide rates globally in comparison to the mental health facilities offered in each country, and the GDP per Capita of each country. All data is taken for the most recent years that the country had data for the category. Suicide has become more widely talked about in social media in recent years, however it seems that the awareness of mental health has been an emerging topic in developed countries but is not as emphasized in undeveloped countries. Suicide has resulted in the loss of many amazing people. As such, we want to investigate possible correlations between these different indicators, hopefully determining a reason or a trend for higher suicide rates in particular countries over others.
@@ -43,28 +23,35 @@ We will be using combined data from both [Suicide Rates Overview 1985 to 2016](h
 
 Our combined dataset has `r countries_no` countries and columns: `r col_names`. The average suicide rate (per 100k population) was `r  average_suicide_rate`, with the largest suicide rate of `r max_suicide_rate`. The average GDP per capita for this dataset is `r average_gdp` and the average number of mental health facilities offered (per 100k population) was `r average_mental_hospitals`.
 
+---
+
 ## Summary Table
 
-This table is sorted by... and contains all countries we are assessing as well as their corresponding average GDPs per capita, number of mental health facilities, and the total number of suicides across the years.
+This table is sorted by suicide rates and contains all countries we are assessing as well as their corresponding average GDPs per capita, number of mental health facilities, and the total number of suicides.
 
 ``` {r, echo=FALSE}
 get_summary_information()
 ```
 
-This summary of our data is arranged in descending order of suicides. As such, we can observe that...
+This summary of our data is arranged in ascending order of suicides. As such, we can observe that the Republic of Korea has the highest number of suicides(with 389.14 suicides per 100k population), followed by Lithuania(361.72 suicides per 100k population) and Guyana(356.38 per 100k population).
 
 ---
 
 ## Mental Health Facilities Available
 
-This map displays the mental health facilities available globally, showing in color countries that are included in our data. 
+This map displays the ratio of mental health facilities available globally to suicide rates, showing in a color scale the countries in our data that offers global health facilities. 
+
 ```{r, echo=FALSE}
 create_map()
 ```
 
-## Suicide Rates, Gender, and Age
+The darker the color, the more ineffective the mental health facility as the ratio of suicides to facilities available is higher than the lighter colored regions. The darkest area is located in a country in South America. There doesn't appear to be a trend in particular regions, but the darkest region is significantly smaller than many of the other lighter regions. Perhaps land size might be affecting the ratio as more mental facilities might be built due to there being more land.
 
-This bar chart displays the correlation between the different age groups of each gender (Male or Female) and the corresponding number of suicides for individuals in each category.
+---
+
+## Gender and Age
+
+This bar chart displays trends in suicide rates between the different age groups of each gender (Male or Female). As each age group has 2 discrete categories within them (the genders), we felt that a bar chart is more appropriate to display the trends.
 
 ``` {r, echo=FALSE}
 chart1()
@@ -72,7 +59,9 @@ chart1()
 
 From this chart, we can observe that suicide rates increase across both genders from individuals 5-14 years old, to individuals 35-54 years old. The number of suicides peak for individuals of both genders between 35-54 years old with 34532 suicides per 100k population for females and ... suicides per 100k population for males. The suicide rates for both genders decrease from individuals 55-74 years old to 75+ years old. The lowest number of suicides observed was for the age group 5-14 years old. As such, we observe a bell curve in the number of suicides across both genders, centering around individuals between 35-54 years old. There were lower suicide rates for females than for males across every age group.
 
-## Suicide Rates, GDP
+---
+
+## GDP per Capita
 
 We created a scatterplot to display the GDP per capita of each country against their respective suicide rates for the years 2014 to 2016. We were investigating potential connections between suicide rates and a country's socioeconomic status.
 
@@ -82,10 +71,12 @@ chart2()
 
 However, as we can observe from this scatterplot, there does not appear to be a correlation between the GDP per capita of a country and the suicide rate of the country across all 3 years. However, there are groupings of data plots that display particular characteristics. The countries with the highest suicide rates(300-400 per 100k population) were within 0-0.5 million GDP per Capita while countries with GDP per capita between 1 million and 1.5 million had suicide rates under 200(per 100k population). 
 
+---
 
 ## Conclusion
+The country with the highest suicide rate to mental health facility ratio is located in a country in South America. There doesn't appear to be a trend affecting ratios in particular regions of the world, but the region with the highest ratio is significantly smaller than many of the other lower ratio regions. 
 
-The data visualization for suicide rates, age and gender displays a bell-shaped trend between the number of suicides and age across both males and females. The suicide rate is highest for both genders between 35-54 years old. 
+The data visualization for suicide rates, age and gender displays a bell-shaped trend between the number of suicides and age across both males and females. The suicide rate is highest for both genders between 35-54 years old. The suicide rates for males was consistently lower than females throughout the age groups.
 
 There does not seem to be a correlation between GDP per capita and suicide rates. However, the outlying data plots are grouped into particular categories. The countries with the highest suicide rates(300-400 per 100k population) were within 0-0.5 million GDP per Capita while countries with GDP per capita between 1 million and 1.5 million had suicide rates under 200(per 100k population). 
 
