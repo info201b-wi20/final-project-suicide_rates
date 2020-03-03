@@ -5,9 +5,10 @@
 
 library("dplyr")
 
-combined_table <- read.csv("data/combined_table.csv", stringsAsFactors = FALSE)
-
-get_summary_info <- function(data_set) {
+get_summary_info <- function() {
+  combined_table <- read.csv("data/combined_table.csv", stringsAsFactors = FALSE)
+  
+  
   return(list(
     countries_no = combined_table %>%
       nrow(),
@@ -31,5 +32,3 @@ get_summary_info <- function(data_set) {
     col_names = dput(names(combined_table))
   ))
 }
-
-info <- get_summary_info(combined_table)
