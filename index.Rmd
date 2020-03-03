@@ -15,6 +15,16 @@ source("suicide_gdp_chart.R")
 ```
 
 # Suicide Rates Globally
+```{r getInformation, echo=FALSE}
+source("summary.R")
+info <- get_summary_info()
+countries_no <- info$countries_no
+col_names <- info$col_names
+average_suicide_rate <- info$average_suicide_rate
+max_suicide_rate <- info$max_suicide_rate
+average_gdp <- info$average_gdp
+average_mental_hospitals <- info$average_mental_hospitals
+```
 
 ## Introduction
 Our project will be investigating suicide rates globally in comparison to the mental health facilities offered in each country, and the GDP per Capita of each country. All data is taken for the most recent years that the country had data for the category. Suicide has become more widely talked about in social media in recent years, however it seems that the awareness of mental health has been an emerging topic in developed countries but is not as emphasized in undeveloped countries. Suicide has resulted in the loss of many amazing people. As such, we want to investigate possible correlations between these different indicators, hopefully determining a reason or a trend for higher suicide rates in particular countries over others.
