@@ -15,7 +15,7 @@ library(plotly)
 
 # Suicide Rates Globally
 ```{r getInformation, include=FALSE}
-source("summary.R")
+source("scripts/summary.R")
 info <- get_summary_info()
 countries_no <- info$countries_no
 col_names <- info$col_names
@@ -39,7 +39,7 @@ Our combined dataset has `r countries_no` countries and columns: `r col_names`. 
 This table is sorted by suicide rates and contains all countries we are assessing as well as their corresponding average GDPs per capita, number of mental health facilities, and the total number of suicides.
 
 ``` {r, echo=FALSE}
-source("summary_table.R")
+source("scripts/summary_table.R")
 get_summary_information()
 ```
 
@@ -52,7 +52,7 @@ This summary of our data is arranged in ascending order of suicides. As such, we
 This map displays the ratio of mental health facilities available globally to suicide rates, showing in a color scale the countries in our data that offers global health facilities. 
 
 ```{r, echo=FALSE}
-source("facility_chart.R")
+source("scripts/facility_chart.R")
 create_map()
 ```
 
@@ -65,7 +65,7 @@ The darker the color, the more ineffective the mental health facility as the rat
 This bar chart displays trends in suicide rates between the different age groups of each gender (Male or Female). As each age group has 2 discrete categories within them (the genders), we felt that a bar chart is more appropriate to display the trends.
 
 ``` {r, echo=FALSE}
-source("suicide_age_chart.R")
+source("scripts/suicide_age_chart.R")
 suicide_age_chart()
 ```
 
@@ -78,7 +78,7 @@ From this chart, we can observe that suicide rates increase across both genders 
 We created a scatterplot to display the GDP per capita of each country against their respective suicide rates for the years 2014 to 2016. We were investigating potential connections between suicide rates and a country's socioeconomic status.
 
 ``` {r, echo=FALSE}
-source("suicide_gdp_chart.R")
+source("scripts/suicide_gdp_chart.R")
 suicide_gdp_chart()
 ```
 
