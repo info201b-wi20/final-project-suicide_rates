@@ -20,8 +20,8 @@ suicide_gdp_chart <- function() {
   sum_info_2 <- year_2014_to_2016 %>%
     group_by(country, year) %>%
     summarise(
-      suicides.100k.pop = sum(suicides.100k.pop),
-      gdp_per_capita.... = sum(gdp_per_capita....)
+      suicides.100k.pop = round(mean(suicides.100k.pop), digits = 2),
+      gdp_per_capita.... = round(mean(gdp_per_capita....), digits = 2)
     )
 
   plot <- ggplot(sum_info_2, aes(
