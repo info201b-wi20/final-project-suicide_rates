@@ -59,6 +59,7 @@ page_gdp <- tabPanel(
   )
 )
 
+
 ui <- navbarPage(
   "Suicide Rates",
   page_gdp,
