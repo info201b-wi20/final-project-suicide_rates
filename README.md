@@ -1,3 +1,7 @@
+---
+permalink: /index.Rmd
+---
+
 # [Final Project](https://info201b-wi20.github.io/final-project-suicide_rates/)
 
 **Suicide Rates**
