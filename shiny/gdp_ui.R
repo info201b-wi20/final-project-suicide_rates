@@ -1,5 +1,23 @@
 library(plotly)
 
+facility_page <- tabPanel(
+  "Number of mental health facilties around the world",
+  titlePanel("Total number of mental health facilities around the world and their effectiveness"),
+  sidebarLayout(
+    sidebarPanel(
+      radioButtons(
+        inputId = "facility_type",
+        label = "Select the data you want to display",
+        choices = c("Total number avaliable" = "total", 
+                    "Ratio of number of suicides vs. number of facilities" = "ratio")
+      ),
+    ),
+    mainPanel(
+      plotlyOutput(outputId = "facility_plot")
+    )
+  )
+)
+
 page_gdp <- tabPanel(
   "GDP per Capita",
   titlePanel("A Plot on Average Suicide Rate Versus 
@@ -43,5 +61,6 @@ page_gdp <- tabPanel(
 
 ui <- navbarPage(
   "Suicide Rates",
-  page_gdp
+  page_gdp,
+  facility_page
 )
