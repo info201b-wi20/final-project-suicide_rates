@@ -1,6 +1,7 @@
 library(dplyr)
 library(ggplot2)
 library(plotly)
+library(scales)
 
 data <- read.csv("../data/suicide-rates-overview-1985-to-2016.csv",
                  stringsAsFactors = FALSE
