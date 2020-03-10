@@ -41,7 +41,47 @@ page_gdp <- tabPanel(
   )
 )
 
+# Define content for the age VS suicide chart
+page_age <- tabPanel(
+  "Age VS Suicide Rate", # label for the tab in the navbar
+  # This content uses a sidebar layout
+  sidebarLayout(
+    sidebarPanel(
+      selectInput("age",
+                  label = h3("Select the Age Range"),
+                  choices = midwest$county,
+                  selected = "COOK"
+      ),
+      
+      radioButtons(
+        inputId = "no_perc", label = h3("Numbers or Percentages?"),
+        choices = list(
+          "Number" = 1,
+          "Percentage" = 2
+        ),
+        selected = 1
+      ),
+    ),
+    mainPanel(
+      h3("Populations of Demographic Groups:"),
+      p(paste(
+        "This is a pie chart of the distribution of",
+        "demographics within a selected county (selected",
+        "in the drop-down menu on the left).",
+        "You can choose for the values shown to be in",
+        "actual population numbers or in percentages.",
+        "Not all counties are shown as these counties don't",
+        "have populations of some of the races."
+      )),
+      strong("Try Gallatin & Vermilion!"),
+      
+      plotlyOutput(outputId = "pie")
+    )
+  )
+)
+
 ui <- navbarPage(
   "Suicide Rates",
-  page_gdp
+  page_gdp,
+  page_age
 )
