@@ -2,6 +2,7 @@ library(dplyr)
 library(ggplot2)
 library(plotly)
 library(scales)
+library(mapproj)
 
 data <- read.csv("../data/suicide-rates-overview-1985-to-2016.csv",
                  stringsAsFactors = FALSE
@@ -22,6 +23,88 @@ sum_info_2 <- year_2014_to_2016 %>%
   )
 
 server <- function(input, output) {
+  
+  output$facility_plot <- renderPlotly({
+    df_facility <- 
+      read.csv("../data/Mental Health Facilities.csv", stringsAsFactors = FALSE)
+    df_countries <- 
+      read.csv("../data/suicide-rates-overview-1985-to-2016.csv", stringsAsFactors = FALSE)
+    
+    matches <- df_facility %>%
+      select(Country, Year)
+    
+    df_countries_filtered <- df_countries %>%
+      filter(year %in% matches$Year) %>%
+      filter(country %in% matches$Country) %>%
+      group_by(country) %>%
+      filter(year == max(year)) %>%
+      summarise(
+        suicides_number = sum(suicides_no),
+        gpd_per_capita = mean(gdp_per_capita....),
+        suicides_100kpop = sum(suicides.100k.pop)
+      )
+    
+    df_facility_filtered <- df_facility %>%
+      filter(Country %in% df_countries_filtered$country) %>%
+      group_by(Country) %>%
+      summarise(
+        total_avalibility_per100k = sum(Mental.hospitals..per.100.000.population.,
+                                        Mental.health.units.in.general.hospitals..per.100.000.population.,
+                                        Mental.health.outpatient.facilities..per.100.000.population.,
+                                        Mental.health.day.treatment.facilities..per.100.000.population.,
+                                        Community.residential.facilities..per.100.000.population.,
+                                        na.rm = TRUE
+        )
+      )
+    
+    df_plotting <- df_countries_filtered %>%
+      mutate(
+        total_avalibility = df_facility_filtered$total_avalibility_per100k,
+        ratio = suicides_100kpop/total_avalibility
+      )
+    
+    df <- read.csv('https://raw.githubusercontent.com/plotly/datasets/master/2014_world_gdp_with_codes.csv', 
+                   stringsAsFactors = FALSE)
+    
+    df <- df  %>%
+      rename(country = COUNTRY) %>%
+      left_join(df_plotting, by="country")
+    
+    df[is.na(df)] = 0
+    
+    l <- list(color = toRGB("grey"), width = 0.5)
+    
+    g <- list(
+      showframe = FALSE,
+      showcoastlines = FALSE,
+      projection = list(type = 'Mercator')
+    )
+    
+    fig <- plot_geo(df)
+    
+    if (input$facility_type == "total"){
+      fig <- fig %>% add_trace(
+        z = ~total_avalibility, color = ~total_avalibility, colors = 'Reds',
+        text = ~country, locations = ~CODE, marker = list(line = l)
+      )
+      fig <- fig %>% colorbar(title = 'Total number')
+      fig <- fig %>% layout(
+        title = 'Global avalibility mental heath facilities(per 100k population)',
+        geo = g
+      )
+    } else {
+      fig <- fig %>% add_trace(
+        z = ~ratio, color = ~ratio, colors = 'Reds',
+        text = ~country, locations = ~CODE, marker = list(line = l)
+      )
+      fig <- fig %>% colorbar(title = 'Intensity')
+      fig <- fig %>% layout(
+        title = 'The intensity of need in mental heath facilities',
+        geo = g
+      )
+    }
+    return(fig)
+  })
   
   output$gdp_plot <- renderPlotly({
     
