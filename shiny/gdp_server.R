@@ -148,7 +148,6 @@ server <- function(input, output) {
   })
   
   output$age_plot <- renderPlotly({
-    suicide_age_chart <- function() {
       # Correlation on suicide rate versus age (with genders)
       year_2014_to_2016 <- data %>%
         filter(year >= 2014) %>%
@@ -165,7 +164,7 @@ server <- function(input, output) {
           "75+ years"
         ))) %>%
         # Filter by check boxes
-        select(input$age_choice)
+        filter(age = input$age_choice)
       
       sum_info_1 <- sum_info %>%
         group_by(age, sex) %>%
@@ -182,7 +181,7 @@ server <- function(input, output) {
           summarise(suicides_no = sum(suicides_no)) %>%
           filter(sex == "male")
       }
-    }
+    
     
     plot <- ggplot(sum_info_1, aes(age, suicides_no, fill = sex)) +
       geom_bar(stat = "identity", position = "dodge") +
