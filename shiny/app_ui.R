@@ -16,7 +16,28 @@ overview <- tabPanel(
     For this project, we used combined data from both Suicide Rates Overview 1985 to 2016 and 
     Mental health service availability to create data visualizations that may aid us in 
     finding these trends."),
-  a("Link to Data", href = "https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016")
+  p(""),
+  p(strong("Questions we hope to answer:")),
+  p(em("Is there a correlation between a country’s socioeconomic status and its suicide rate?")),
+  p("Using data from Kaggle, we can directly graph each country's
+  GDP per capita (an indicator for the standard of living) with it's suicide rate."),
+  p(em("Are there more mental health facilities for countries with higher suicide rates?
+  Or is the number more closely correlated with the countries' socioeconomic status?")),
+  p("Using data from the World Health Organization and Kaggle we
+  will compare the many different mental health facilities and services available with the current
+  suicide rate of each country and the GDP per capita from 1985 to 2016."),
+  p(em("How does age and gender relate to the number of suicide rates? Is there a higher rate
+    for a particular demographic?")),
+  p("Using Kaggle and World Health Organization data, we will
+    graph the data for each demographic and determine if particular age groups or gender has
+    a particular bearing on the quantity of suicides."),
+  p(""),
+  p(strong("DATA LINKS")),
+  a("Kaggle", href = "https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016"),
+  p(""),
+  a("World Health Organization", href = "http://apps.who.int/gho/data/node.main.MHFAC?lang=en"),
+  p(""),
+  img(src = "https://www.advocate.com/sites/advocate.com/files/2019/06/11/troubled-youthx750.jpg")
 )
 
 facility_page <- tabPanel(
