@@ -105,8 +105,8 @@ page_gdp <- tabPanel(
       sliderInput(
         inputId = "gdp_choice",
         label = h4("GDP per Capita Range"),
-        min = min(sum_info_2$gdp_per_capita....),
-        max = max(sum_info_2$gdp_per_capita....),
+        min = min(1285),
+        max = max(126352),
         value = c(min, max)
       ),
       checkboxInput(
