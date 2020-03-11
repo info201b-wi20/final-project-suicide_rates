@@ -96,10 +96,6 @@ page_age <- tabPanel(
     ),
     mainPanel(
       h3("Suicide Rate VS Age & Gender"),
-      p(paste(
-        "Write the report here."
-      )),
-      
       plotlyOutput(outputId = "age_plot")
     )
   )
