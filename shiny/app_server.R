@@ -1,5 +1,6 @@
 library(dplyr)
 library(ggplot2)
+library(plotly)
 library(scales)
 library(mapproj)
 
@@ -89,11 +90,7 @@ server <- function(input, output) {
   
   output$gdp_plot <- renderPlotly({
     
-    data <- read.csv("../data/suicide-rates-overview-1985-to-2016.csv",
-                     stringsAsFactors = FALSE
-    )
-    
-    year_2014_to_2016 <- data %>%
+    year_2014_to_2016 <- df_countries %>%
       filter(year >= 2014) %>%
       select(
         country, year, sex, age, suicides_no,
@@ -125,7 +122,7 @@ server <- function(input, output) {
       x = gdp_per_capita....,
       color = year,
       label = country
-      )
+    )
     ) +
       labs(
         title = "A Plot on suicide rate versus gdp per capita",
@@ -143,7 +140,7 @@ server <- function(input, output) {
         se = FALSE,
         color = "coral",
         method = "loess"
-        )
+      )
     }
     
     chart <- ggplotly(plot)
@@ -153,27 +150,27 @@ server <- function(input, output) {
   
   output$age_plot <- renderPlotly({
     
-      sum_info <- year_2014_to_2016 %>%
-        mutate(age = factor(age, levels = c(
-          "5-14 years",
-          "15-24 years", "25-34 years",
-          "35-54 years", "55-74 years",
-          "75+ years"
-        ))) %>%
-        # Filter by check boxes
-        filter(age %in% input$age_choice)
-      
-      sum_info_1 <- sum_info %>%
-        group_by(age, sex) %>%
-        summarise(suicides_no = sum(suicides_no))
-      
-      if (input$gender == "1") {
-        sum_info_1 <- sum_info_1 %>%
-          filter(sex == "female")
-      } else if (input$gender == "2") {
-        sum_info_1 <- sum_info_1 %>%
-          filter(sex == "male")
-      }
+    sum_info <- year_2014_to_2016 %>%
+      mutate(age = factor(age, levels = c(
+        "5-14 years",
+        "15-24 years", "25-34 years",
+        "35-54 years", "55-74 years",
+        "75+ years"
+      ))) %>%
+      # Filter by check boxes
+      filter(age %in% input$age_choice)
+    
+    sum_info_1 <- sum_info %>%
+      group_by(age, sex) %>%
+      summarise(suicides_no = sum(suicides_no))
+    
+    if (input$gender == "1") {
+      sum_info_1 <- sum_info_1 %>%
+        filter(sex == "female")
+    } else if (input$gender == "2") {
+      sum_info_1 <- sum_info_1 %>%
+        filter(sex == "male")
+    }
     
     plot <- ggplot(sum_info_1, aes(age, suicides_no, fill = sex)) +
       geom_bar(stat = "identity", position = "dodge") +
