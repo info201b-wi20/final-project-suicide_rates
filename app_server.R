@@ -4,16 +4,21 @@ library(plotly)
 library(scales)
 library(mapproj)
 
+df_countries <- 
+  read.csv("data/suicide-rates-overview-1985-to-2016.csv", stringsAsFactors = FALSE)
 
+df_facility <- 
+  read.csv("data/Mental Health Facilities.csv", stringsAsFactors = FALSE)
+
+year_2014_to_2016 <- df_countries %>%
+  filter(year >= 2014) %>%
+  select(
+    country, year, sex, age, suicides_no,
+    suicides.100k.pop, gdp_per_capita....
+  )
 
 server <- function(input, output) {
-  
-  df_countries <- 
-    read.csv("data/suicide-rates-overview-1985-to-2016.csv", stringsAsFactors = FALSE)
-  
-  df_facility <- 
-    read.csv("data/Mental Health Facilities.csv", stringsAsFactors = FALSE)
-  
+
   output$facility_plot <- renderPlotly({
 
     matches <- df_facility %>%
@@ -94,16 +99,6 @@ server <- function(input, output) {
   
   output$gdp_plot <- renderPlotly({
     
-    df_countries <- 
-      read.csv("data/suicide-rates-overview-1985-to-2016.csv", stringsAsFactors = FALSE)
-    
-    year_2014_to_2016 <- df_countries %>%
-      filter(year >= 2014) %>%
-      select(
-        country, year, sex, age, suicides_no,
-        suicides.100k.pop, gdp_per_capita....
-      )
-    
     sum_info_2 <- year_2014_to_2016 %>%
       group_by(country, year) %>%
       summarise(
@@ -156,16 +151,6 @@ server <- function(input, output) {
   })
   
   output$age_plot <- renderPlotly({
-    
-    df_countries <- 
-      read.csv("data/suicide-rates-overview-1985-to-2016.csv", stringsAsFactors = FALSE)
-    
-    year_2014_to_2016 <- df_countries %>%
-      filter(year >= 2014) %>%
-      select(
-        country, year, sex, age, suicides_no,
-        suicides.100k.pop, gdp_per_capita....
-      )
     
     sum_info <- year_2014_to_2016 %>%
       mutate(age = factor(age, levels = c(
