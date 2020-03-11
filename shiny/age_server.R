@@ -24,6 +24,10 @@ output$age_plot <- renderPlotly({
       # Filter by check boxes
       select(input$age_choice)
 
+    sum_info_1 <- sum_info %>%
+      group_by(age, sex) %>%
+      summarise(suicides_no = sum(suicides_no))
+    
     if (input$gender == "1") {
       sum_info_1 <- sum_info %>%
         group_by(age, sex) %>%
@@ -34,10 +38,6 @@ output$age_plot <- renderPlotly({
         group_by(age, sex) %>%
         summarise(suicides_no = sum(suicides_no)) %>%
         filter(sex == "male")
-    } else {
-      sum_info_1 <- sum_info %>%
-        group_by(age, sex) %>%
-        summarise(suicides_no = sum(suicides_no))
     }
   }
 
