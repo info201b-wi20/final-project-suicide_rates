@@ -85,7 +85,7 @@ page_age <- tabPanel(
                          )
       ),
       radioButtons(
-        inputId = "gender", label = h3("Choose the Sex:"),
+        inputId = "gender", label = h3("Choose the Gender:"),
         choices = list(
           "Female" = 1,
           "Male" = 2,
