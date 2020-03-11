@@ -1,4 +1,5 @@
 # Final Project [Report](https://info201b-wi20.github.io/final-project-suicide_rates/index)
+## [App](https://ploypp.shinyapps.io/final-project-suicide_rates/)
 
 **Suicide Rates**
 - Our project will be investigating suicide rates globally in comparison to mental health facilities offered, and the socioeconomic status of each country. Suicide has become more widely talked about in social media in recent years, however it seems the awareness of mental health has been an emerging topic in developed countries but is not as emphasized in undeveloped countries. Suicide has resulted in the loss of many amazing people. As such, we want to investigate possible correlations between these different indicators, hopefully determining a reason or a trend for higher suicide rates in particular countries over others.
