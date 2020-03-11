@@ -61,7 +61,7 @@ page_gdp <- tabPanel(
 
 # Define content for the age VS suicide chart
 page_age <- tabPanel(
-  "Age VS Suicide Rate", # label for the tab in the navbar
+  "Suicide Rate VS Age", # label for the tab in the navbar
   # This content uses a sidebar layout
   sidebarLayout(
     sidebarPanel(
@@ -107,7 +107,7 @@ page_age <- tabPanel(
 
 ui <- navbarPage(
   "Suicide Rates",
+  page_age
   page_gdp,
   facility_page,
-  page_age
 )

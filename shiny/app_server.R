@@ -168,12 +168,13 @@ server <- function(input, output) {
           group_by(age, sex) %>%
           filter(sex == "female") %>%
           summarise(suicides_no = sum(suicides_no))
-          
       } else if (input$gender == "2") {
         sum_info_1 <- sum_info %>%
           group_by(age, sex) %>%
           filter(sex == "male") %>%
           summarise(suicides_no = sum(suicides_no))
+      } else {
+        sum_info_1 <- sum_info
       }
     
     plot <- ggplot(sum_info_1, aes(age, suicides_no, fill = sex)) +
