@@ -1,5 +1,24 @@
 library(plotly)
 
+overview <- tabPanel(
+  "Overview",
+  titlePanel("Suicide Rates"),
+  p("Project by Adam Ahmed, Yudong Li, Michelle Oceana, Ploypilin Pruekcharoen"),
+  p("Suicide is the act of intentionally causing one's own death, and, in many ways,
+    a deep tragedy to others. It is a desperate attempt to escape suffering that has
+    become unbearable. Blinded by feelings of self-loathing, hopelessness, and isolation, 
+    someone who is feeling suicidal can’t see any way of finding relief except through death.
+    It is an important subject we need to discuss, however, stigma surrounding suicide 
+    leads to underreporting, and data collection methods critical to suicide prevention
+    need to be improved."),
+  p("Our project will be investigating suicide rates globally in comparison to 
+    mental health facilities offered, age groups, and the socioeconomic status of each country.
+    For this project, we used combined data from both Suicide Rates Overview 1985 to 2016 and 
+    Mental health service availability to create data visualizations that may aid us in 
+    finding these trends."),
+  a("Link to Data", href = "https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016")
+)
+
 facility_page <- tabPanel(
   "Number of mental health facilties around the world",
   titlePanel("Total number of mental health facilities around the world and their effectiveness"),
@@ -101,9 +120,33 @@ page_age <- tabPanel(
   )
 )
 
+summary_page <- tabPanel(
+  "Summary",
+  titlePanel("Key Takeaways"),
+  p("1. When tracking the effectiveness of mental health facilities across the globe,
+    there doesn’t appear to be a trend in particular regions, but the regions with 
+    the least effect tend to be significantly smaller than many of the other lighter regions."),
+  
+  p("2. In our age and gender visualization, Suicide rates tend to be the highest at ages 35-54,
+    also known as when people are reaching their middle ages. In addition, when comparing genders,
+    there tends to be more males who are likely to commit suicide than females."),
+  
+  p("3. The countries with the highest suicide rates(300-400 per 100k population) were 
+    within 0-0.5 million GDP per Capita while countries with GDP per capita between 1 million
+    and 1.5 million had suicide rates under 200(per 100k population). This shows that those who was born
+    in a country of lower socioeocnomic status had a higher chance of committing suicide at some point
+    during their life."),
+  
+  p(strong("If you’re thinking about suicide, are worried about a friend or loved on,
+     or would like emotional support, call the number 1-800-273-8255 and speak
+     with a counselor today."))
+)
+
 ui <- navbarPage(
   "Suicide Rates",
+  overview,
   page_age,
   page_gdp,
-  facility_page
+  facility_page,
+  summary_page
 )
