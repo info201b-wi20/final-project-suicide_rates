@@ -134,18 +134,25 @@ server <- function(input, output) {
         y = "Average Suicide Number per 100k Population"
       ) +
       theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-      scale_x_continuous(labels = comma, limits = input$gdp_choice) +
+      coord_cartesian(xlim = input$gdp_choice) +
+      scale_x_continuous(labels = comma) +
       geom_point(show.legend = FALSE) +
       facet_wrap(~year, ncol = 3)
     
     if (input$smooth) {
-      plot <- plot + geom_smooth(se = FALSE, color = "coral", method = "loess")
+      plot <- plot + geom_smooth(
+        se = FALSE,
+        color = "coral",
+        method = "loess"
+        )
     }
     
     chart <- ggplotly(plot)
     
     return(chart)
   })
+  
+  suppressWarnings(stat_smooth)
   
   output$age_plot <- renderPlotly({
     

@@ -1,0 +1,29 @@
+h1 {
+  font-family: Gill Sans, sans-serif;
+  font-weight: 600;
+}
+h3 {
+  font-family: Gill Sans, sans-serif;
+}
+h4 {
+  font-family: Gill Sans, sans-serif;
+}
+h5 {
+  font-style: italic;
+}
+#call {
+  font-family: Gill Sans, sans-serif;
+  font-size: 125%;
+  font-style: italic;
+}
+p {
+  font-family: Helvetica, sans-serif;
+}
+#heath_care_description {
+  border:1px solid gray;
+  padding: 1em;
+  margin: -1em;
+}
+a:hover {
+  background-color: #FFDD81;
+}
