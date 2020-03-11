@@ -157,24 +157,18 @@ server <- function(input, output) {
           "75+ years"
         ))) %>%
         # Filter by check boxes
-        filter(age == input$age_choice)
+        filter(age %in% input$age_choice)
       
-#      sum_info_1 <- sum_info %>%
-#        group_by(age, sex) %>%
-#        summarise(suicides_no = sum(suicides_no))
+      sum_info_1 <- sum_info %>%
+        group_by(age, sex) %>%
+        summarise(suicides_no = sum(suicides_no))
       
       if (input$gender == "1") {
-        sum_info_1 <- sum_info %>%
-          group_by(age, sex) %>%
-          filter(sex == "female") %>%
-          summarise(suicides_no = sum(suicides_no))
+        sum_info_1 <- sum_info_1 %>%
+          filter(sex == "female")
       } else if (input$gender == "2") {
-        sum_info_1 <- sum_info %>%
-          group_by(age, sex) %>%
-          filter(sex == "male") %>%
-          summarise(suicides_no = sum(suicides_no))
-      } else {
-        sum_info_1 <- sum_info
+        sum_info_1 <- sum_info_1 %>%
+          filter(sex == "male")
       }
     
     plot <- ggplot(sum_info_1, aes(age, suicides_no, fill = sex)) +
