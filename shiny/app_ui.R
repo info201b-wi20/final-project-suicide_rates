@@ -107,7 +107,7 @@ page_age <- tabPanel(
 
 ui <- navbarPage(
   "Suicide Rates",
-  page_age
+  page_age,
   page_gdp,
-  facility_page,
+  facility_page
 )
